@@ -8,22 +8,27 @@
 <h1>Анкета</h1>
 <FORM>
 <!-- Поле ввода -->
-<BR>Фамилия:
-<BR><INPUT TYPE='text' VALUE=''><BR>
+<BR>Вше имя:
+<BR><INPUT TYPE='text' x:Name="name" VALUE=''><BR>
 <!-- Группа переключателей -->
 36
 <H2>Группа переключателей</H2>
-<BR><INPUT TYPE='radio' NAME='color'>Белый
-<BR><INPUT TYPE='radio' NAME='color'>Красный
-<BR><INPUT TYPE='radio' NAME='color'>Желтый
-<BR><INPUT TYPE='radio' = 'color'>Зеленый<BR>
+<BR><INPUT TYPE='radio' x:Name="pol" NAME='color'>женский
+<BR><INPUT TYPE='radio' x:Name="pol" NAME='color'>мужской
+  <TR><TD VALIGN='top'>
+<SELECT NAME='COUNTRY' SIZE='1'>
+<OPTION VALUE='первый'>первый
+<OPTION VALUE='второй'>второй
+<OPTION VALUE='третий'>третий
+<OPTION VALUE='четвёртый'>четвёртый
+</SELECT></TD>
 <!-- Группа флажков -->
 <H2>Группа флажков</H2>
-<BR><INPUT TYPE= 'checkbox' NAME='fruit'>Груша
-<BR><INPUT TYPE= 'checkbox' NAME='fruit'>Персик
-<BR><INPUT TYPE= 'checkbox' NAME='fruit'>Яблоко<BR>
+<BR><INPUT TYPE= 'checkbox' NAME='fruit'>Паскаль
+<BR><INPUT TYPE= 'checkbox' NAME='fruit'>СИ
+<BR><INPUT TYPE= 'checkbox' NAME='fruit'>Ассемблер<BR>
 <!-- Кнопки -->
-<BR><INPUT TYPE= 'button' VALUE='Пишите мне' ONCLICK=window. open('mailto:MyAddress@mail.ru');>
+<BR><INPUT TYPE= 'button' VALUE='Пишите мне' ONCLICK=fale.open('')>
 <BR><INPUT TYPE= 'button' VALUE='Посмотрите мои фотографии'
 ONCLICK=window.open('http:\\\\www.MySite.org\\MyFoto.htm');> </FORM>
 </BODY>
