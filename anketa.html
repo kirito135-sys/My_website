@@ -8,13 +8,11 @@
 <h1>Анкета</h1>
 <FORM>
 <!-- Поле ввода -->
-<BR>Вше имя:
-<BR><INPUT TYPE='text' x:Name="name" VALUE=''><BR>
+<BR>Вше имя: <BR><INPUT TYPE='text' x:Name="name" VALUE=''><BR>
 <!-- Группа переключателей -->
 36
-<H2>Ваш пол</H2>
-<BR><INPUT TYPE='radio' x:Name="pol" NAME='color'>женский
-<BR><INPUT TYPE='radio' x:Name="pol" NAME='color'>мужской
+<p>Ваш пол <BR><INPUT TYPE='radio' x:Name="pol" NAME='color'>женский
+           <BR><INPUT TYPE='radio' x:Name="pol" NAME='color'>мужской
 <H2>Ваш курс?</H2>
   <TR><TD VALIGN='top'>
 <SELECT NAME='COUNTRY' SIZE='1'>
@@ -31,6 +29,6 @@
 <!-- Кнопки -->
 <BR><INPUT TYPE= 'button' VALUE='Отправка данных' ONCLICK=fale.open('')>
 <BR><INPUT TYPE= 'button' VALUE='Сброс значений полей'
-ONCLICK=window.open('https://kirito135-sys.github.io/My_website/anketa.html');> </FORM>
+ONCLICK=window.open('https://kirito135-sys.github.io/My_website/anketa.html').close;> </FORM>
 </BODY>
 </HTML>
