@@ -31,7 +31,7 @@
 
 <!-- Кнопки -->
 <BR><INPUT TYPE='button' VALUE='Отправка данных' onclick="showData()">
-<BR><button type="reset">Очистить</button>
+<BR><button type="reset" onclick="clearResult()">Очистить</button>
 </FORM>
 
 <p id="result"></p>
@@ -59,8 +59,16 @@ if (document.getElementById('lang_asm').checked) {
 if (langText == "") {
     langText = "не указаны";
 }
+    var result="<h3>Данные анкеты:</h3>"+
+               "<p>Имя: "+userName+"</p>"+
+               "</p>Пол: "+gender+"</p>"+
+               "</p>Курс: "+kurs+"</p>"+
+               "<p>Языки: "+langText+"<p>";
     document.getElementById('result').innerHTML = result;
 }
+    function clearResult(){
+        document.getElementById('result').innerHTML = "";
+    }
 </script>
 </BODY>
 </HTML>
