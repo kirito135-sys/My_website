@@ -52,26 +52,22 @@ function showData() {
     // Получаем курс
     var kurs = document.getElementById('kurs').value;
 
-    // Получаем языки программирования
-    var languages = [];
-    if (document.getElementById('lang_pas').checked) {
-        languages.push("Паскаль");
-    }
-    if (document.getElementById('lang_c').checked) {
-        languages.push("СИ");
-    }
-    if (document.getElementById('lang_asm').checked) {
-        languages.push("Ассемблер");
-    }
-    var langText = languages.length > 0 ? languages.join(", ") : "не указаны";
+    /// Получаем языки программирования
+var langText = "";
+if (document.getElementById('lang_pas').checked) {
+    langText = langText + "Паскаль, ";
+}
+if (document.getElementById('lang_c').checked) {
+    langText = langText + "СИ, ";
+}
+if (document.getElementById('lang_asm').checked) {
+    langText = langText + "Ассемблер, ";
+}
 
-    // Формируем и выводим результат
-    var result = "<h3>Данные анкеты:</h3>" +
-                 "<p><b>Имя:</b> " + userName + "</p>" +
-                 "<p><b>Пол:</b> " + gender + "</p>" +
-                 "<p><b>Курс:</b> " + kurs + "</p>" +
-                 "<p><b>Языки программирования:</b> " + langText + "</p>";
-
+// Если ничего не выбрано — пишем "не указаны"
+if (langText == "") {
+    langText = "не указаны";
+}
     document.getElementById('result').innerHTML = result;
 }
 </script>
