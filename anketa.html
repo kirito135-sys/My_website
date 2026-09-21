@@ -8,27 +8,73 @@
 <h1>Анкета</h1>
 <FORM name="forma">
 <!-- Поле ввода -->
-<BR>Вше имя: <BR><INPUT TYPE='text' id="name" VALUE=''><BR>
+<BR>Ваше имя: <BR><INPUT TYPE='text' id="name" VALUE=''><BR>
+
 <!-- Группа переключателей -->
-<p>Ваш пол <BR><INPUT TYPE='radio' id="pol" NAME='color'>женский
-               <INPUT TYPE='radio' id="pol" NAME='color'>мужской
+<p>Ваш пол <BR>
+<INPUT TYPE='radio' id="pol_f" NAME='pol'>женский
+<INPUT TYPE='radio' id="pol_m" NAME='pol'>мужской
+
 <H2>Ваш курс?</H2>
-  <TR><TD VALIGN='top'>
-<SELECT  id="kurs" NAME='COUNTRY' SIZE='1'>
+<SELECT id="kurs" NAME='kurs' SIZE='1'>
 <OPTION VALUE='первый'>первый
 <OPTION VALUE='второй'>второй
 <OPTION VALUE='третий'>третий
 <OPTION VALUE='четвёртый'>четвёртый
-</SELECT></TD>
+</SELECT>
+
 <!-- Группа флажков -->
 <H2>Какие языки программирования вы знаете?</H2>
-<BR><INPUT TYPE= 'checkbox' id="lag" NAME='fruit'>Паскаль
-<BR><INPUT TYPE= 'checkbox' id="lag" NAME='fruit'>СИ
-<BR><INPUT TYPE= 'checkbox' id="lag" NAME='fruit'>Ассемблер<BR>
-<!-- Кнопки -->
-<BR><INPUT TYPE= 'button' VALUE='Отправка данных' CLICK="">
-<BR><button type="reset">Очистить</button> </FORM>
-<script>
+<BR><INPUT TYPE='checkbox' id="lang_pas" NAME='lang'>Паскаль
+<BR><INPUT TYPE='checkbox' id="lang_c" NAME='lang'>СИ
+<BR><INPUT TYPE='checkbox' id="lang_asm" NAME='lang'>Ассемблер<BR>
 
+<!-- Кнопки -->
+<BR><INPUT TYPE='button' VALUE='Отправка данных' onclick="showData()">
+<BR><button type="reset">Очистить</button>
+</FORM>
+
+<!-- Блок для вывода результата -->
+<div id="result" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;"></div>
+
+<script>
+function showData() {
+    // Получаем имя
+    var userName = document.getElementById('name').value;
+
+    // Получаем пол
+    var gender = "не указан";
+    if (document.getElementById('pol_f').checked) {
+        gender = "женский";
+    } else if (document.getElementById('pol_m').checked) {
+        gender = "мужской";
+    }
+
+    // Получаем курс
+    var kurs = document.getElementById('kurs').value;
+
+    // Получаем языки программирования
+    var languages = [];
+    if (document.getElementById('lang_pas').checked) {
+        languages.push("Паскаль");
+    }
+    if (document.getElementById('lang_c').checked) {
+        languages.push("СИ");
+    }
+    if (document.getElementById('lang_asm').checked) {
+        languages.push("Ассемблер");
+    }
+    var langText = languages.length > 0 ? languages.join(", ") : "не указаны";
+
+    // Формируем и выводим результат
+    var result = "<h3>Данные анкеты:</h3>" +
+                 "<p><b>Имя:</b> " + userName + "</p>" +
+                 "<p><b>Пол:</b> " + gender + "</p>" +
+                 "<p><b>Курс:</b> " + kurs + "</p>" +
+                 "<p><b>Языки программирования:</b> " + langText + "</p>";
+
+    document.getElementById('result').innerHTML = result;
+}
+</script>
 </BODY>
 </HTML>
