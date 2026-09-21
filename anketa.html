@@ -6,12 +6,12 @@
 <BODY>
 <a href="index.html">Главная</a>
 <h1>Анкета</h1>
-<FORM id="forma">
+<FORM name="forma">
 <!-- Поле ввода -->
 <BR>Вше имя: <BR><INPUT TYPE='text' id="name" VALUE=''><BR>
 <!-- Группа переключателей -->
 <p>Ваш пол <BR><INPUT TYPE='radio' id="pol" NAME='color'>женский
-           <BR><INPUT TYPE='radio' id="pol" NAME='color'>мужской
+               <INPUT TYPE='radio' id="pol" NAME='color'>мужской
 <H2>Ваш курс?</H2>
   <TR><TD VALIGN='top'>
 <SELECT  id="kurs" NAME='COUNTRY' SIZE='1'>
@@ -26,7 +26,9 @@
 <BR><INPUT TYPE= 'checkbox' id="lag" NAME='fruit'>СИ
 <BR><INPUT TYPE= 'checkbox' id="lag" NAME='fruit'>Ассемблер<BR>
 <!-- Кнопки -->
-<BR><INPUT TYPE= 'button' VALUE='Отправка данных' ONCLICK=fale.open('')>
+<BR><INPUT TYPE= 'button' VALUE='Отправка данных' CLICK="">
 <BR><button type="reset">Очистить</button> </FORM>
+<script>
+
 </BODY>
 </HTML>
