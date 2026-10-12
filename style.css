@@ -13,18 +13,6 @@ h1, h2, h3 {
     margin-bottom: 0.5em;
 }
 
-/* Ссылки (для index.html) */
-a {
-    color: #4da6ff; /* Приятный голубой цвет */
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #80c1ff;
-    text-decoration: underline;
-}
-
 /* Таблицы (для table.html) */
 table {
     width: 100%;
