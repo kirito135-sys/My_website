@@ -5,7 +5,10 @@ body {
     line-height: 1.6;
     margin: 20px;
 }
+#menu{
+color:black;
 
+}
 /* Заголовки (если они появятся в HTML) */
 h1, h2, h3 {
     color: #ffffff;
