@@ -1,7 +1,7 @@
 /* Базовые настройки страницы */
 body {
-    background-color: #121212; /* Темный фон для контраста с белым текстом */
-    color: white; /* Цвет шрифта не изменен */
+    background-color: #000000; /* Темный фон для контраста с белым текстом */
+    color: black; /* Цвет шрифта не изменен */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
