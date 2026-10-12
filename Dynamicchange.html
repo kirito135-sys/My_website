@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа №5 - JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        var arr = ["Ivanov", "Petrov", "Sidorov"];
+        var counter = 0;
+
+        function add_to_list() {
+            if (typeof(arr[counter]) != "undefined") {
+                var list = document.getElementById('list');
+                var li = document.createElement('LI');
+                li.innerHTML = arr[counter];
+                list.appendChild(li);
+                counter++;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Практическая работа №5</h1>
+    <h2>JavaScript. Динамическое изменение html-документа в браузере</h2>
+    
+    <p><strong>Цель работы:</strong> изучить основы javascript и научиться динамически изменять html-документ.</p>
+    
+    <p><strong>Задание:</strong> Создать html-документ, сделать динамическое создание списка группы.</p>
+    
+    <h3>Ход работы</h3>
+    
+    <p onclick="add_to_list()" style="cursor: pointer; color: #4da6ff; text-decoration: underline;">Добавить в список</p>
+    <ul id="list"></ul>
+</body>
+</html>
