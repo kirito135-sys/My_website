@@ -4,4 +4,4 @@ document.write('<a href="index.html">Главная</a>' +
 " "+
 '<a href="anketa.html">Анкета</a>'+
 " "+
-'Dynamicchange.html');
+'<a href="Dynamicchange.html">Динамическое изменение</a>');
