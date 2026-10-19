@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №10</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
 
+        /* ===== Задание 1: document (Ex9) ===== */
+        function zadanie1() {
+            document.body.style.backgroundColor = "#E7E6D8";
+            document.body.style.color = "red";
+            var info = document.getElementById("ex9-result");
+            info.innerHTML = "Спасибо, что пришли к нам на курсы!<br><br>Дата последней модификации: " + document.lastModified;
+        }
+
+        /* ===== Задание 2: window.open (Ex10) ===== */
+        function openWindow() {
+            window.open("http://www.google.com", "", "toolbar=no,scrollbars=yes,width=500,height=500,resizable=yes,top=100,left=500");
+        }
+
+        /* ===== Задание 3: redirect (Ex11) ===== */
+        function doRedirect() {
+            var info = document.getElementById("ex11-result");
+            info.innerHTML = "Переадресация через 5 секунд...";
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 5000);
+        }
+
+        /* ===== Задание 4: ссылки (Ex12) ===== */
+        function checkPDF() {
+            if (confirm("Для загрузки документа требуется программа Acrobat. Продолжить загрузку?")) {
+                alert("Загрузка началась!");
+            } else {
+                alert("Загрузка отменена.");
+            }
+        }
+
+        /* ===== Задание 5: картинка (Ex13) ===== */
+        function zoomIn(img) {
+            img.width = 400;
+            img.height = 300;
+        }
+        function zoomOut(img) {
+            img.width = 200;
+            img.height = 150;
+        }
+
+        /* ===== Задание 6: форма (Ex15) ===== */
+        function checkForm(form) {
+            if (form.name.value == "") {
+                alert("Заполните поле 'Ваше имя'!");
+                form.name.focus();
+                return false;
+            }
+            if (form.password.value.length <= 4) {
+                alert("Пароль должен содержать больше 4 символов!");
+                form.password.focus();
+                return false;
+            }
+            if (form.password.value != form.password2.value) {
+                alert("Пароли не совпадают!");
+                form.password2.focus();
+                return false;
+            }
+            if (form.email.value == "" || form.email.value.indexOf("@") == -1) {
+                alert("Заполните поле 'Электронный адрес' и убедитесь, что он содержит символ @!");
+                form.email.focus();
+                return false;
+            }
+            if (form.message.value.length <= 10) {
+                alert("Сообщение должно содержать больше 10 символов!");
+                form.message.focus();
+                return false;
+            }
+            alert("Форма успешно заполнена!");
+            return true;
+        }
+
+    </script>
+</head>
+<body>
+
+    <h1>Практическая работа №10</h1>
+    <h2>Объекты клиентских приложений. Обработка событий</h2>
+
+    <p><b>Цель работы:</b> научиться работать с объектами клиентских приложений.</p>
+
+    <!-- Задание 1 -->
+    <h3>Задание 1. Объект document (Ex9)</h3>
+    <p>Изменение цвета фона (#E7E6D8), цвета шрифта (красный) и вывод даты модификации.</p>
+    <button onclick="zadanie1()">Выполнить задание 1</button>
+    <p id="ex9-result"></p>
+
+    <hr>
+
+    <!-- Задание 2 -->
+    <h3>Задание 2. Объект window — открытие нового окна (Ex10)</h3>
+    <p>Открытие окна 500×500 по клику на ссылку.</p>
+    <a href="#" onclick="openWindow(); return false;">Щелкните на ссылке для получения справочной информации</a>
+
+    <hr>
+
+    <!-- Задание 3 -->
+    <h3>Задание 3. Переадресация с задержкой (Ex11)</h3>
+    <p>Переход на главную страницу через 5 секунд после нажатия кнопки.</p>
+    <button onclick="doRedirect()">Запустить переадресацию</button>
+    <p id="ex11-result"></p>
+
+    <hr>
+
+    <!-- Задание 4 -->
+    <h3>Задание 4. Ссылки с обработкой событий (Ex12)</h3>
+    <p>Первая ссылка — подтверждение через confirm(). Вторая — меняет фон на красный при наведении.</p>
+    <p><a href="#" onclick="checkPDF(); return false;">Скачать PDF-документ</a></p>
+    <p><a href="#" onmouseover="document.body.style.backgroundColor='red'" onmouseout="document.body.style.backgroundColor='#121212'">Наведите на эту ссылку — фон станет красным</a></p>
+
+    <hr>
+
+    <!-- Задание 5 -->
+    <h3>Задание 5. Увеличение картинки (Ex13)</h3>
+    <p>При наведении курсора картинка увеличивается, при отведении — уменьшается.</p>
+    <img src="https://via.placeholder.com/200x150" 
+         width="200" height="150"
+         onmouseover="zoomIn(this)" 
+         onmouseout="zoomOut(this)" 
+         alt="Пример картинки">
+
+    <hr>
+
+    <!-- Задание 6 -->
+    <h3>Задание 6. Форма с проверкой (Ex15)</h3>
+    <p><i>* — необходимые для заполнения поля</i></p>
+    <form name="myForm" onsubmit="return checkForm(this)">
+        <label>Ваше имя*: <input type="text" name="name"></label>
+        <label>Пароль*: <input type="password" name="password"></label>
+        <label>Подтверждение пароля*: <input type="password" name="password2"></label>
+        <label>Электронный адрес*: <input type="text" name="email"></label>
+        <label>Тема сообщения: <input type="text" name="subject"></label>
+        <label>Сообщение: <textarea name="message" rows="5" cols="40"></textarea></label>
+        <p>
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Очистить">
+        </p>
+    </form>
+
+    <hr>
+    <h3>Контрольные вопросы</h3>
+    <ol>
+        <li>Какой скрипт нужно использовать, чтобы открыть новое окно? — <code>window.open()</code></li>
+        <li>Какой скрипт отвечает за переадресацию? — <code>window.location.href</code> или <code>setTimeout</code> с задержкой</li>
+    </ol>
+
+</body>
+  </html>
