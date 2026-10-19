@@ -1,15 +1,227 @@
-body {
-    background-color: #ffffff;
-    color: #000000;
-    text-align: justify;
-    font-family: Arial, sans-serif;
-    margin: 20px;
+/* ===== Базовые настройки ===== */
+* {
+    box-sizing: border-box;
 }
 
-/* Списки */
-ul, ol {
-    margin: 10px 0 10px 25px;
+html, body {
+    margin: 0;
+    padding: 0;
 }
-li {
-    margin-bottom: 5px;
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2c3e50;
+    background: #f4f6f8;
+    padding: 0 20px 40px;
+}
+
+/* ===== Меню ===== */
+#menu {
+    background: #2c3e50;
+    margin: 0 -20px 25px;
+    padding: 0 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#menu a {
+    display: inline-block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+#menu a:hover {
+    background: #34495e;
+    color: #ffffff;
+}
+
+/* ===== Заголовки ===== */
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.15em;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+
+/* ===== Ссылки ===== */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1c5980;
+    text-decoration: underline;
+}
+
+/* ===== Параграфы и списки ===== */
+p {
+    margin: 0.6em 0;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* ===== Таблицы ===== */
+table {
+    border-collapse: collapse;
+    margin: 10px 0 20px;
+    background: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+table[border] {
+    border: 1px solid #bdc3c7;
+}
+
+td {
+    border: 1px solid #bdc3c7;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+}
+
+/* ===== Кнопки ===== */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    font-family: inherit;
+    font-size: 0.95em;
+    padding: 8px 16px;
+    margin: 4px 4px 4px 0;
+    border: none;
+    border-radius: 4px;
+    background: #3498db;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background: #2980b9;
+}
+
+input[type="reset"] {
+    background: #95a5a6;
+}
+
+input[type="reset"]:hover {
+    background: #7f8c8d;
+}
+
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
+    transform: translateY(1px);
+}
+
+/* ===== Формы ===== */
+form {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin: 15px 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    max-width: 640px;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    font-family: inherit;
+    font-size: 0.95em;
+    padding: 8px 10px;
+    margin: 4px 0 10px;
+    border: 1px solid #ccd1d9;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+    background: #fbfcfd;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+textarea {
+    max-width: 100%;
+    resize: vertical;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+    transform: translateY(1px);
+}
+
+/* ===== Медиа ===== */
+iframe.youtube {
+    display: block;
+    max-width: 100%;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    background: #000;
+    margin: 10px 0;
+}
+
+audio {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+/* ===== Блок результата ===== */
+#result {
+    font-weight: 500;
+    color: #27ae60;
+    background: #eafaf1;
+    border-left: 4px solid #27ae60;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+/* ===== Мелкие утилиты ===== */
+hr {
+    border: none;
+    border-top: 1px solid #e1e4e8;
+    margin: 25px 0;
 }
