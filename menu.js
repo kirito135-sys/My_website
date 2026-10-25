@@ -1,13 +1,15 @@
-document.write('<a href="index.html">Главная</a>' +
-" "+
-'<a href="table.html">Таблицы</a>' +
-" "+
-'<a href="anketa.html">Анкета</a>'+
-" "+
-'<button href="Dynamicchange.html">Динамическое изменение</button>'+
-" "+
-'<a href="OYF.html">Операторы управления, функции</a>'+
-" "+
-'<a href="Event processing.html">Обработка событий</a>'+
-" "+
-'<a href="play and  video.html">песня и видео Бумажный кораблик</a>');
+document.write(
+    '<button onclick="location.href=\'index.html\'">Главная</button>' +
+    ' ' +
+    '<button onclick="location.href=\'table.html\'">Таблицы</button>' +
+    ' ' +
+    '<button onclick="location.href=\'anketa.html\'">Анкета</button>' +
+    ' ' +
+    '<button onclick="location.href=\'Dynamicchange.html\'">Динамическое изменение</button>' +
+    ' ' +
+    '<button onclick="location.href=\'OYF.html\'">Операторы управления, функции</button>' +
+    ' ' +
+    '<button onclick="location.href=\'Event processing.html\'">Обработка событий</button>' +
+    ' ' +
+    '<button onclick="location.href=\'play and  video.html\'">Песня и видео Бумажный кораблик</button>'
+);
