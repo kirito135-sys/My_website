@@ -4,7 +4,7 @@ document.write('<a href="index.html">Главная</a>' +
 " "+
 '<a href="anketa.html">Анкета</a>'+
 " "+
-'<a href="Dynamicchange.html">Динамическое изменение</a>'+
+'<button href="Dynamicchange.html">Динамическое изменение</button>'+
 " "+
 '<a href="OYF.html">Операторы управления, функции</a>'+
 " "+
