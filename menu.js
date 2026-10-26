@@ -11,5 +11,5 @@ document.write(
     ' ' +
     '<button onclick="location.href=\'Event processing.html\'">Обработка событий</button>' +
     ' ' +
-    '<button onclick="location.href=\'play and  video.html\'">Песня и видео Бумажный кораблик</button>'
+    '<button onclick="location.href=\'Array.html\'">Массив</button>'
 );
