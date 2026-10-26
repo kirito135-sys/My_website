@@ -1,67 +1,36 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Изображения-карты</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="menu"><script language="JavaScript" src="menu.js" type="text/javascript"></script></div>
-    <h1>Упражнение 15. Изображения-карты</h1>
-
-    <p>На изображении прямоугольник с диагоналями разделён на 4 треугольника.
-       Наведите курсор на любой треугольник — появится подсказка.
-       Кликните — перейдёте к соответствующему упражнению.</p>
-
-    <!-- SVG-изображение прямоугольника с диагоналями -->
-    <img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>
-    <svg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'>
-        <rect width='300' height='200' fill='white' stroke='black' stroke-width='2'/>
-        <!-- Верхний треугольник (красный) -->
-        <polygon points='0,0 300,0 150,100' fill='red' stroke='black' stroke-width='1'/>
-        <!-- Правый треугольник (жёлтый) -->
-        <polygon points='300,0 300,200 150,100' fill='yellow' stroke='black' stroke-width='1'/>
-        <!-- Нижний треугольник (розовый) -->
-        <polygon points='300,200 0,200 150,100' fill='pink' stroke='black' stroke-width='1'/>
-        <!-- Левый треугольник (синий) -->
-        <polygon points='0,200 0,0 150,100' fill='lightblue' stroke='black' stroke-width='1'/>
-    </svg>" 
-    alt="Прямоугольник с диагоналями" 
-    usemap="#map1" 
-    width="300" height="200">
-
-    <map name="map1">
-        <!-- Левый треугольник (синий) -->
-        <area 
-            coords="50,60,10" 
-            shape="circle" 
-            href="pr1.html" 
-            alt="Переход к упражнению 1" 
-            title="Переход к упражнению 1">
-        
-        <!-- Верхний треугольник (красный) -->
-        <area 
-            coords="100,30,10" 
-            shape="circle" 
-            href="pr2.html" 
-            alt="Переход к упражнению 2" 
-            title="Переход к упражнению 2">
-        
-        <!-- Правый треугольник (жёлтый) -->
-        <area 
-            coords="180,60,10" 
-            shape="circle" 
-            href="pr3.html" 
-            alt="Переход к упражнению 3" 
-            title="Переход к упражнению 3">
-        
-        <!-- Нижний треугольник (розовый) -->
-        <area 
-            coords="100,100,10" 
-            shape="circle" 
-            href="pr4.html" 
-            alt="Переход к упражнению 4" 
-            title="Переход к упражнению 4">
-    </map>
-</body>
-</html>
+<HTML>
+<TITLE>Изображения-карты</TITLE>
+<BODY>
+<IMG src="прямоугольник. gif" usemap="#map1">
+<MAP name=map1>
+<!-- Левый треугольник-->
+<AREA
+coords="50,60,10"
+shape=circle
+href='Упражнение 1.html'
+alt="Переход к упражнению 1"
+title="Переход к упражнению 1">
+<!-- Верхний треугольник-->
+<AREA
+coords="100,30,10"
+shape=circle
+href='Упражнение 2.html'
+alt="Переход к упражнению 2"
+title="Переход к упражнению 2">
+<!-- Правый треугольник-->
+<AREA
+coords="180,60,10"
+shape=circle
+href='Упражнение 3.html'
+alt="Переход к упражнению 3"
+title="Переход к упражнению 3">
+<!-- Нижний треугольник-->
+<AREA
+coords="100,100,10"
+shape=circle
+href='Упражнение 4.html'
+alt="Переход к упражнению 4"
+title="Переход к упражнению 4">
+</MAP>
+</BODY>
+</HTML>
