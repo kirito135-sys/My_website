@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <title>Изображения-карты</title>
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js"></script>
     <style>
-        .map-section {
-            margin: 30px 0;
-            padding: 20px;
-            border: 1px solid #444;
-            border-radius: 8px;
+        .map-container {
+            text-align: center;
+            margin: 20px 0;
         }
-        .map-section h2 {
-            color: #4da6ff;
-            margin-top: 0;
-        }
-        .map-section img {
-            display: block;
-            margin: 15px 0;
+        .map-container img {
             border: 2px solid #4da6ff;
-            border-radius: 4px;
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
         }
         .legend {
             background-color: #1e1e1e;
             border: 1px solid #333;
-            border-radius: 6px;
+            border-radius: 8px;
             padding: 15px;
-            margin-top: 15px;
+            margin: 20px auto;
+            max-width: 600px;
         }
         .legend h3 {
             color: #4da6ff;
@@ -38,7 +34,7 @@
             margin: 0;
         }
         .legend li {
-            padding: 4px 0;
+            padding: 5px 0;
             border-bottom: 1px solid #333;
         }
         .legend li:last-child {
@@ -58,97 +54,108 @@
     <div id="menu">
         <script src="menu.js"></script>
     </div>
-        <img src="прямоугольник.gif" 
-             alt="Прямоугольник с диагоналями" 
-             usemap="#rectmap" 
-             width="300" height="200">
 
-        <map name="rectmap">
-            <!-- Верхний треугольник (красный) -->
-            <area shape="poly" 
-                  coords="0,0,300,0,150,100" 
-                  href="index.html" 
-                  alt="Главная страница" 
-                  title="Переход на главную страницу">
-            
-            <!-- Правый треугольник (жёлтый) -->
-            <area shape="poly" 
-                  coords="300,0,300,200,150,100" 
-                  href="table.html" 
-                  alt="Таблицы" 
-                  title="Переход к таблицам">
-            
-            <!-- Нижний треугольник (розовый) -->
-            <area shape="poly" 
-                  coords="300,200,0,200,150,100" 
-                  href="anketa.html" 
-                  alt="Анкета" 
-                  title="Переход к анкете">
-            
-            <!-- Левый треугольник (голубой) -->
-            <area shape="poly" 
-                  coords="0,200,0,0,150,100" 
-                  href="Dynamicchange.html" 
-                  alt="Динамическое изменение" 
-                  title="Переход к динамическому изменению">
-        </map>
+    <h1>Изображения-карты</h1>
 
-    <br>
+    <div class="map-container">
         <img src="город.gif" 
              alt="Карта города" 
              usemap="#citymap" 
              width="800" height="600">
 
         <map name="citymap">
-            
-            <!-- Главная улица (горизонтальная, по центру сверху) -->
+            <!-- Главная улица (горизонтальная, по центру) -->
             <area shape="rect" 
-                  coords="50,200,750,230" 
+                  coords="50,280,750,320" 
+                  href="index.html" 
                   alt="Главная улица" 
-                  title="Главная улица — центральная магистраль района">
+                  title="Главная улица">
 
-            <!-- Проспект Мира (вертикальный, слева) -->
+            <!-- Проспект (вертикальный, слева) -->
             <area shape="rect" 
-                  coords="150,50,180,550" 
+                  coords="180,50,220,550" 
+                  href="table.html" 
                   alt="Проспект Мира" 
-                  title="Проспект Мира — главный проспект">
+                  title="Проспект Мира">
 
             <!-- Улица Ленина (горизонтальная, сверху) -->
             <area shape="rect" 
-                  coords="180,100,750,130" 
+                  coords="220,100,750,140" 
+                  href="anketa.html" 
                   alt="Улица Ленина" 
                   title="Улица Ленина">
 
             <!-- Советская улица (горизонтальная, снизу) -->
             <area shape="rect" 
-                  coords="180,470,750,500" 
+                  coords="220,460,750,500" 
+                  href="Dynamicchange.html" 
                   alt="Советская улица" 
                   title="Советская улица">
 
-            <!-- Кольцевая дорога (большой прямоугольник по краям) -->
+            <!-- Кольцевая дорога -->
             <area shape="poly" 
                   coords="50,50,750,50,750,550,50,550,50,50" 
+                  href="Map.html" 
                   alt="Кольцевая дорога" 
-                  title="Кольцевая дорога — объездная вокруг района">
+                  title="Кольцевая дорога">
 
             <!-- Улица Пушкина (вертикальная, в центре) -->
             <area shape="rect" 
-                  coords="400,130,430,470" 
+                  coords="400,140,430,460" 
+                  href="pr9.html" 
                   alt="Улица Пушкина" 
                   title="Улица Пушкина">
 
-            <!-- Центральный переулок (маленькая вертикальная дорога) -->
+            <!-- Центральный переулок -->
             <area shape="rect" 
-                  coords="550,130,580,470" 
+                  coords="550,140,580,460" 
+                  href="pr10.html" 
                   alt="Центральный переулок" 
                   title="Центральный переулок">
 
-            <!-- Набережная (вдоль реки справа) -->
+            <!-- Набережная (справа) -->
             <area shape="rect" 
                   coords="720,50,750,550" 
+                  href="pr15.html" 
                   alt="Набережная" 
-                  title="Набережная реки">
+                  title="Набережная">
+
+            <!-- Большое зелёное поле (парк) -->
+            <area shape="poly" 
+                  coords="200,50,600,50,550,200,250,200" 
+                  href="index.html" 
+                  alt="Парк" 
+                  title="Парк">
+
+            <!-- Водоём (правый верхний угол) -->
+            <area shape="poly" 
+                  coords="600,50,800,50,800,150,650,150" 
+                  href="table.html" 
+                  alt="Водоём" 
+                  title="Водоём">
+
+            <!-- Жилые дома (левая группа) -->
+            <area shape="poly" 
+                  coords="200,250,350,250,350,400,200,400" 
+                  href="anketa.html" 
+                  alt="Жилые дома" 
+                  title="Жилые дома">
+
+            <!-- Жилые дома (центральная группа) -->
+            <area shape="poly" 
+                  coords="450,250,600,250,600,400,450,400" 
+                  href="Dynamicchange.html" 
+                  alt="Жилые дома" 
+                  title="Жилые дома">
+
+            <!-- Промышленная зона (справа) -->
+            <area shape="poly" 
+                  coords="620,250,780,250,780,500,620,500" 
+                  href="pr9.html" 
+                  alt="Промышленная зона" 
+                  title="Промышленная зона">
 
         </map>
+    </div>
 </body>
 </html>
