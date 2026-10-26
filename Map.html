@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Изображения-карты</title>
     <link rel="stylesheet" href="style.css">
-    <script src="menu.js"></script>
     <style>
         .map-container {
             text-align: center;
@@ -54,9 +53,42 @@
     <div id="menu">
         <script src="menu.js"></script>
     </div>
+        <img src="прямоугольник.gif" 
+             alt="Прямоугольник с диагоналями" 
+             usemap="#rectmap" 
+             width="300" height="200">
 
-    <h1>Изображения-карты</h1>
+        <map name="rectmap">
+            <!-- Верхний треугольник (красный) -->
+            <area shape="poly" 
+                  coords="0,0,300,0,150,100" 
+                  href="index.html" 
+                  alt="Главная страница" 
+                  title="Переход на главную страницу">
+            
+            <!-- Правый треугольник (жёлтый) -->
+            <area shape="poly" 
+                  coords="300,0,300,200,150,100" 
+                  href="table.html" 
+                  alt="Таблицы" 
+                  title="Переход к таблицам">
+            
+            <!-- Нижний треугольник (розовый) -->
+            <area shape="poly" 
+                  coords="300,200,0,200,150,100" 
+                  href="anketa.html" 
+                  alt="Анкета" 
+                  title="Переход к анкете">
+            
+            <!-- Левый треугольник (голубой) -->
+            <area shape="poly" 
+                  coords="0,200,0,0,150,100" 
+                  href="Dynamicchange.html" 
+                  alt="Динамическое изменение" 
+                  title="Переход к динамическому изменению">
+        </map>
 
+    <br>
     <div class="map-container">
         <img src="город.gif" 
              alt="Карта города" 
