@@ -1,46 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+    <meta charset="UTF-8">
     <title>Изображения-карты</title>
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js"></script>
+    <style>
+        .map-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 8px;
+        }
+        .map-section h2 {
+            color: #4da6ff;
+            margin-top: 0;
+        }
+        .map-section img {
+            display: block;
+            margin: 15px 0;
+            border: 2px solid #4da6ff;
+            border-radius: 4px;
+        }
+        .legend {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .legend h3 {
+            color: #4da6ff;
+            margin-top: 0;
+        }
+        .legend ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .legend li {
+            padding: 4px 0;
+            border-bottom: 1px solid #333;
+        }
+        .legend li:last-child {
+            border-bottom: none;
+        }
+        .legend a {
+            color: #4da6ff;
+            text-decoration: none;
+        }
+        .legend a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
- <div id="menu"><script language="JavaScript" src="menu.js" type="text/javascript"></script></div><br>
-    <!-- Замените "прямоугольник.gif" на название вашей картинки -->
-    <img src="прямоугольник.gif" 
-         alt="Прямоугольник с диагоналями" 
-         usemap="#map1" 
-         width="300" height="200">
 
-    <!-- Карта изображений -->
-    <map name="map1">
-        <!-- Верхний треугольник (красный) -->
-        <area shape="poly" 
-              coords="0,0,300,0,150,100" 
-              href="index.html" 
-              alt="Главная страница" 
-              title="Переход на главную страницу">
-        
-        <!-- Правый треугольник (жёлтый) -->
-        <area shape="poly" 
-              coords="300,0,300,200,150,100" 
-              href="table.html" 
-              alt="Таблицы" 
-              title="Переход к таблицам">
-        
-        <!-- Нижний треугольник (розовый) -->
-        <area shape="poly" 
-              coords="300,200,0,200,150,100" 
-              href="anketa.html" 
-              alt="Анкета" 
-              title="Переход к анкете">
-        
-        <!-- Левый треугольник (голубой) -->
-        <area shape="poly" 
-              coords="0,200,0,0,150,100" 
-              href="Dynamicchange.html" 
-              alt="Динамическое изменение" 
-              title="Переход к динамическому изменению">
-    </map>
+    <div id="menu">
+        <script src="menu.js"></script>
+    </div>
+
+    <h1>Изображения-карты</h1>
+
+    <!-- ===== ЧАСТЬ 1: Прямоугольник с диагоналями ===== -->
+    <div class="map-section">
+        <h2>Упражнение 15. Прямоугольник с диагоналями</h2>
+        <p>На изображении прямоугольник с диагоналями разделён на 4 цветных треугольника.
+           Наведите курсор на любой треугольник — появится подсказка.
+           Кликните — перейдёте на соответствующую страницу.</p>
+
+        <img src="прямоугольник.gif" 
+             alt="Прямоугольник с диагоналями" 
+             usemap="#rectmap" 
+             width="300" height="200">
+
+        <map name="rectmap">
+            <!-- Верхний треугольник (красный) -->
+            <area shape="poly" 
+                  coords="0,0,300,0,150,100" 
+                  href="index.html" 
+                  alt="Главная страница" 
+                  title="Переход на главную страницу">
+            
+            <!-- Правый треугольник (жёлтый) -->
+            <area shape="poly" 
+                  coords="300,0,300,200,150,100" 
+                  href="table.html" 
+                  alt="Таблицы" 
+                  title="Переход к таблицам">
+            
+            <!-- Нижний треугольник (розовый) -->
+            <area shape="poly" 
+                  coords="300,200,0,200,150,100" 
+                  href="anketa.html" 
+                  alt="Анкета" 
+                  title="Переход к анкете">
+            
+            <!-- Левый треугольник (голубой) -->
+            <area shape="poly" 
+                  coords="0,200,0,0,150,100" 
+                  href="Dynamicchange.html" 
+                  alt="Динамическое изменение" 
+                  title="Переход к динамическому изменению">
+        </map>
+
+        <div class="legend">
+            <h3>Легенда — прямоугольник</h3>
+            <ul>
+                <li>🔴 Красный (верхний) → <a href="index.html">Главная</a></li>
+                <li>🟡 Жёлтый (правый) → <a href="table.html">Таблицы</a></li>
+                <li>🩷 Розовый (нижний) → <a href="anketa.html">Анкета</a></li>
+                <li>🔵 Голубой (левый) → <a href="Dynamicchange.html">Динамическое изменение</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===== ЧАСТЬ 2: Карта города ===== -->
+    <div class="map-section">
+        <h2>Лабораторная работа №6. Карта города</h2>
+        <p>На карте изображены улицы и дороги жилого района. 
+           Наведите курсор на любую дорогу — появится название. 
+           Кликните — перейдёте на страницу с информацией об улице.</p>
+
+        <img src="город.gif" 
+             alt="Карта города" 
+             usemap="#citymap" 
+             width="800" height="600">
+
+        <map name="citymap">
+            
+            <!-- Главная улица (горизонтальная, по центру сверху) -->
+            <area shape="rect" 
+                  coords="50,200,750,230" 
+                  href="street1.html" 
+                  alt="Главная улица" 
+                  title="Главная улица — центральная магистраль района">
+
+            <!-- Проспект Мира (вертикальный, слева) -->
+            <area shape="rect" 
+                  coords="150,50,180,550" 
+                  href="street2.html" 
+                  alt="Проспект Мира" 
+                  title="Проспект Мира — главный проспект">
+
+            <!-- Улица Ленина (горизонтальная, сверху) -->
+            <area shape="rect" 
+                  coords="180,100,750,130" 
+                  href="street3.html" 
+                  alt="Улица Ленина" 
+                  title="Улица Ленина">
+
+            <!-- Советская улица (горизонтальная, снизу) -->
+            <area shape="rect" 
+                  coords="180,470,750,500" 
+                  href="street4.html" 
+                  alt="Советская улица" 
+                  title="Советская улица">
+
+            <!-- Кольцевая дорога (большой прямоугольник по краям) -->
+            <area shape="poly" 
+                  coords="50,50,750,50,750,550,50,550,50,50" 
+                  href="ring.html" 
+                  alt="Кольцевая дорога" 
+                  title="Кольцевая дорога — объездная вокруг района">
+
+            <!-- Улица Пушкина (вертикальная, в центре) -->
+            <area shape="rect" 
+                  coords="400,130,430,470" 
+                  href="street5.html" 
+                  alt="Улица Пушкина" 
+                  title="Улица Пушкина">
+
+            <!-- Центральный переулок (маленькая вертикальная дорога) -->
+            <area shape="rect" 
+                  coords="550,130,580,470" 
+                  href="lane1.html" 
+                  alt="Центральный переулок" 
+                  title="Центральный переулок">
+
+            <!-- Набережная (вдоль реки справа) -->
+            <area shape="rect" 
+                  coords="720,50,750,550" 
+                  href="naberezhnaya.html" 
+                  alt="Набережная" 
+                  title="Набережная реки">
+
+        </map>
+
+        <div class="legend">
+            <h3>Легенда — карта города</h3>
+            <ul>
+                <li>🛣️ <a href="street1.html">Главная улица</a> — центральная магистраль</li>
+                <li>🌳 <a href="street2.html">Проспект Мира</a> — главный проспект</li>
+                <li>🏛️ <a href="street3.html">Улица Ленина</a></li>
+                <li>️ <a href="street4.html">Советская улица</a></li>
+                <li>🔄 <a href="ring.html">Кольцевая дорога</a> — объездная</li>
+                <li>📚 <a href="street5.html">Улица Пушкина</a></li>
+                <li>🔀 <a href="lane1.html">Центральный переулок</a></li>
+                <li> <a href="naberezhnaya.html">Набережная</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===== Пояснение ===== -->
+    <div class="map-section">
+        <h2>Как это работает</h2>
+        <ul>
+            <li>Тег <code>&lt;img usemap="#имя"&gt;</code> связывает изображение с картой <code>&lt;map name="имя"&gt;</code>.</li>
+            <li>Внутри <code>&lt;map&gt;</code> теги <code>&lt;area&gt;</code> задают активные области.</li>
+            <li><code>shape="rect"</code> — прямоугольная область, <code>coords="x1,y1,x2,y2"</code>.</li>
+            <li><code>shape="poly"</code> — многоугольная область, <code>coords="x1,y1,x2,y2,x3,y3,..."</code>.</li>
+            <li><code>shape="circle"</code> — круглая область, <code>coords="x,y,r"</code>.</li>
+            <li>Атрибут <code>title</code> показывает подсказку при наведении мыши.</li>
+            <li>Атрибут <code>href</code> указывает страницу для перехода.</li>
+        </ul>
+
+        <h3>Как подобрать точные координаты</h3>
+        <ol>
+            <li>Откройте <code>город.gif</code> в Paint.</li>
+            <li>Наведите курсор на угол улицы — внизу слева Paint показывает координаты (например, <code>180, 100</code>).</li>
+            <li>Для <code>shape="rect"</code> укажите: <code>coords="x1,y1,x2,y2"</code> (левый верхний и правый нижний угол).</li>
+            <li>Для <code>shape="poly"</code> укажите все вершины по порядку.</li>
+            <li>Или используйте онлайн-инструмент: <a href="https://www.image-map.net/" target="_blank">image-map.net</a> — загрузите картинку, нарисуйте области мышкой, скопируйте готовый код.</li>
+        </ol>
+    </div>
+
 </body>
 </html>
