@@ -13,7 +13,10 @@ document.write(
     ' ' +
     '<button onclick="location.href=\'Array.html\'">Массив</button>'+
     ' ' +
-    '<button onclick="location.href=\'Map.html\'">Карта</button>'
-);
+    '<button onclick="location.href=\'Map.html\'">Карта</button>'+
+    ' ' +
+    '<button onclick="location.href=\'foto.html\'">рисунки</button>'+
+    ' ' +
+    '<button onclick="location.href=\'anketapassword.html\'">анкета с паролем</button>');
 
 
