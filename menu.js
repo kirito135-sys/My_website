@@ -17,6 +17,8 @@ document.write(
     ' ' +
     '<button onclick="location.href=\'foto.html\'">рисунки</button>'+
     ' ' +
-    '<button onclick="location.href=\'anketapassword.html\'">анкета с паролем</button>');
+    '<button onclick="location.href=\'anketapassword.html\'">анкета с паролем</button>'+
+    ' ' +
+    '<button onclick="location.href=\'tabl.html\'">таблица с цветами</button>');
 
 
