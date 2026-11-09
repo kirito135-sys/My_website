@@ -19,6 +19,6 @@ document.write(
     ' ' +
     '<button onclick="location.href=\'anketapassword.html\'">анкета с паролем</button>'+
     ' ' +
-    '<button onclick="location.href=\'tabl.html\'">таблица с цветами</button>');
+    '<button onclick="location.href=\'tabl.html\'">09.11</button>');
 
 
