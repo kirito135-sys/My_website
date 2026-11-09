@@ -11,12 +11,8 @@
 
         for (var i = 0; i < 15; i++) {
             document.write("<tr>");
-            for (var j = 0; j < 15; j++) {
-                var t = (i + j) / 28;
-                var r = Math.round(100 * t);
-                var g = Math.round(220 - 220 * t);
-                var b = Math.round(255 - 75 * t);
-                document.write("<td width='25' height='25' bgcolor='rgb(" + r + "," + g + "," + b + ")'></td>");
+            for (var j = 0; j < 15; j++) 
+                document.write("<td width='25' height='25' bgcolor=></td>");
             }
             document.write("</tr>");
         }
