@@ -298,21 +298,20 @@ ol > li {
 }
 
 /* Маркированный список со значком 🔥 */
-ul {
+ul.fire-list {
     list-style: none;
     padding-left: 20px;
     margin: 15px 0;
 }
 
-ul li {
+ul.fire-list li {
     padding: 6px 10px;
     margin-bottom: 5px;
-    color: #ffffff;
     position: relative;
     padding-left: 30px;
 }
 
-ul li::before {
+ul.fire-list li::before {
     content: "🔥";
     position: absolute;
     left: 0;
@@ -321,7 +320,6 @@ ul li::before {
     font-size: 18px;
 }
 
-ul li:hover {
-    background-color: #252525;
-    border-radius: 4px;
+ul.fire-list li:hover {
+       border-radius: 4px;
 }
