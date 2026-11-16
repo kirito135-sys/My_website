@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Списки и проверка числа</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkPrime() {
+            var n = parseInt(document.getElementById("number").value);
+            var prime = true;
+            var del = "";
 
+            for (var i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    prime = false;
+                    del = del + i + " ";
+                }
+            }
+
+            if (n < 2) {
+                alert("Введите число больше 1!");
+            } else if (prime) {
+                alert("Число " + n + " — простое!");
+            } else {
+                alert("Число " + n + " — НЕ простое.\nДелители: " + del);
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="menu">
+        <script src="menu.js"></script>
+    </div>
+    <h1>Задание 1. Списки — Состав персонального компьютера</h1>
+    <h2>Многоуровневый список</h2>
+    <ol>
+        <li>Системный блок
+            <ul>
+                <li>Материнская плата
+                    <ul>
+                        <li>Процессор (CPU)</li>
+                        <li>Оперативная память (RAM)</li>
+                        <li>Чипсет</li>
+                    </ul>
+                </li>
+                <li>Видеокарта (GPU)</li>
+                <li>Жёсткий диск (HDD/SSD)</li>
+                <li>Блок питания</li>
+            </ul>
+        </li>
+        <li>Устройства ввода
+            <ul>
+                <li>Клавиатура</li>
+                <li>Мышь</li>
+                <li>Сканер</li>
+            </ul>
+        </li>
+        <li>Устройства вывода
+            <ul>
+                <li>Монитор</li>
+                <li>Принтер</li>
+                <li>Колонки</li>
+            </ul>
+        </li>
+    </ol>
+    <h2>Нумерованный список</h2>
+    <ol>
+        <li>Процессор — выполняет вычисления</li>
+        <li>Оперативная память — хранит данные во время работы</li>
+        <li>Накопитель (HDD/SSD) — долговременное хранение</li>
+        <li>Видеокарта — обработка графики</li>
+        <li>Материнская плата — соединяет все компоненты</li>
+        <li>Блок питания — обеспечивает электроэнергией</li>
+    </ol>
+    <h2>Маркированный список</h2>
+    <ul>
+        <li>Процессор</li>
+        <li>Оперативная память</li>
+        <li>Видеокарта</li>
+        <li>Материнская плата</li>
+        <li>Жёсткий диск</li>
+        <li>Блок питания</li>
+        <li>Монитор</li>
+        <li>Клавиатура</li>
+        <li>Мышь</li>
+    </ul>
+    <hr>
+    <h1>Задание 2. Проверка числа на простоту</h1>
+    <p>Введите число: <input type="number" id="number"></p>
+    <input type="button" value="Проверить" onclick="checkPrime()">
+</body>
+</html>
