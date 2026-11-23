@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <title>Светофор</title>
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <div id="menu"><script src="menu.js"></script></div>
@@ -40,6 +40,24 @@
       document.getElementById("autoTraffic").className = "traffic-light color" + a;
     }
     setInterval(autoSwitch, 2000);
+
+    let b = 0;
+    let lamps = document.querySelectorAll("#autoTraffic .lamp");
+
+    function blinkLight() {
+      b++;
+      if (b == 2) b = 0;
+
+      for (let j = 0; j < 3; j++) {
+        lamps[j].style.opacity = "0.35";
+      }
+
+      if (a == 1 || b == 0) {
+        lamps[a].style.opacity = "1";
+      }
+    }
+
+    setInterval(blinkLight, 300);
   </script>
 </body>
 </html>
