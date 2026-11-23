@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-	<link href="style.css" rel="stylesheet">
-<title>Моя первая страница</title>
+  <title>Видео и песня</title>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-	  <div id="menu"><script language="JavaScript" src="menu.js" type="text/javascript"></script></div>
-Видео
-<br>
-<br>
-<iframe class="youtube" width="640" height="480" src="bumazhnyj_korablik.mp4" frameborder="0" allowfullscreen></iframe>
-<br>
-Песня
-<br>
-<br>
-<audio controls autoplay>
-	<source src="bumazhnyj_korablik.wav">
-	<source src="bumazhnyj_korablik.mp3">
-	<a href="bumazhnyj_korablik.mp3">Бумажный кораблик</a>
-</audio>
+  <div id="menu"><script src="menu.js"></script></div>
+
+  <h1>Видео</h1>
+  <video width="640" controls style="max-width: 100%;">
+    <source src="bumazhnyj_korablik.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <h1>Песня</h1>
+  <audio controls>
+    <source src="bumazhnyj_korablik.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+  </audio>
 </body>
 </html>
