@@ -8,13 +8,11 @@
   <div id="menu"><script src="menu.js"></script></div>
   <h1>Светофор</h1>
   <p>Нажмите на светофор, чтобы переключить сигнал.</p>
-
   <button id="traffic" class="traffic-light color0" onclick="switchLight()" aria-label="Переключить сигнал светофора">
     <span class="lamp red"></span>
     <span class="lamp yellow"></span>
     <span class="lamp green"></span>
   </button>
-
   <h2>Автоматический светофор</h2>
   <p>каждые 2 секунды.</p>
   <div id="autoTraffic" class="traffic-light color0">
@@ -22,40 +20,30 @@
     <span class="lamp yellow"></span>
     <span class="lamp green"></span>
   </div>
-
   <script>
-    let i = 0;
-
+    let i = 0, a = 0;
     function switchLight() {
       i++;
       if (i == 3) i = 0;
       document.getElementById("traffic").className = "traffic-light color" + i;
     }
-
-    let a = 0;
-
     function autoSwitch() {
       a++;
       if (a == 3) a = 0;
       document.getElementById("autoTraffic").className = "traffic-light color" + a;
     }
     setInterval(autoSwitch, 2000);
-
     let blink = false;
     let lamps = document.querySelectorAll("#autoTraffic .lamp");
-
     function blinkLight() {
       blink = !blink;
-
       for (let j = 0; j < 3; j++) {
         lamps[j].style.opacity = "";
       }
-
       if (a != 1 && blink) {
         lamps[a].style.opacity = "0.15";
       }
     }
-
     setInterval(blinkLight, 300);
   </script>
 </body>
