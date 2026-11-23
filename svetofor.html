@@ -30,16 +30,16 @@
       i++;
       if (i == 3) i = 0;
       document.getElementById("traffic").className = "traffic-light color" + i;
+      document.getElementById("autoTraffic").className = "traffic-light color" + i;
     }
 
-    let a = 0;
+  /*  let a = 0;
 
     function autoSwitch() {
       a++;
       if (a == 3) a = 0;
       document.getElementById("autoTraffic").className = "traffic-light color" + a;
-    }
-
+    }*/
     setInterval(autoSwitch, 2000);
   </script>
 </body>
