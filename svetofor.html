@@ -17,15 +17,15 @@
 
   <p>Сейчас горит: <strong id="status">Красный</strong></p>
   <script>
-    let current = 0;
-    const lamps = document.querySelectorAll(".lamp");
-    const names = ["Красный", "Жёлтый", "Зелёный"];
+    let i = 0;
 
     function switchLight() {
-      lamps[current].classList.remove("active");
-      current = (current + 1) % 3;
-      lamps[current].classList.add("active");
-      document.getElementById("status").textContent = names[current];
+      let lamps = document.querySelectorAll(".lamp");
+      lamps[i].classList.remove("active");
+      i++;
+      if (i == 3) i = 0;
+      lamps[i].classList.add("active");
+      document.getElementById("status").textContent = ["Красный", "Жёлтый", "Зелёный"][i];
     }
   </script>
 </body>
