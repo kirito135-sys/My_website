@@ -12,6 +12,8 @@ document.write(
     '<button onclick="location.href=\'Event processing.html\'">Обработка событий</button>' +
     ' ' +
     '<button onclick="location.href=\'Array.html\'">Массив</button>'+
+     ' ' +
+    '<button onclick="location.href=\'play adn video.html\'">видео и песня</button>'+
     ' ' +
     '<button onclick="location.href=\'Map.html\'">Карта</button>'+
     ' ' +
