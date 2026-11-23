@@ -9,23 +9,18 @@
   <h1>Светофор</h1>
   <p>Нажмите на светофор, чтобы переключить сигнал.</p>
 
-  <button class="traffic-light" onclick="switchLight()" aria-label="Переключить сигнал светофора">
-    <span class="lamp red active"></span>
+  <button id="traffic" class="traffic-light color0" onclick="switchLight()" aria-label="Переключить сигнал светофора">
+    <span class="lamp red"></span>
     <span class="lamp yellow"></span>
     <span class="lamp green"></span>
   </button>
-
-  <p>Сейчас горит: <strong id="status">Красный</strong></p>
   <script>
     let i = 0;
 
     function switchLight() {
-      let lamps = document.querySelectorAll(".lamp");
-      lamps[i].classList.remove("active");
       i++;
       if (i == 3) i = 0;
-      lamps[i].classList.add("active");
-      document.getElementById("status").textContent = ["Красный", "Жёлтый", "Зелёный"][i];
+      document.getElementById("traffic").className = "traffic-light color" + i;
     }
   </script>
 </body>
