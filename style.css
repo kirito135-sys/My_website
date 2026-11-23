@@ -338,3 +338,14 @@ ul.fire-list li:hover {
 .traffic-light.color0 .red { opacity: 1; background: red; }
 .traffic-light.color1 .yellow { opacity: 1; background: gold; }
 .traffic-light.color2 .green { opacity: 1; background: limegreen; }
+
+/* Мигание красного и зелёного у автоматического светофора */
+#autoTraffic.color0 .red,
+#autoTraffic.color2 .green {
+  animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
