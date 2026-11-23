@@ -21,6 +21,8 @@ document.write(
     ' ' +
     '<button onclick="location.href=\'tabl.html\'">09.11</button>'+
     ' ' +
-    '<button onclick="location.href=\'SpisokAndhislo.html\'">16.11</button>');
+    '<button onclick="location.href=\'SpisokAndhislo.html\'">16.11</button>'+
+    ' ' +
+    '<button onclick="location.href=\'svetofor.html\'">Светофор</button>');
 
 
