@@ -317,3 +317,25 @@ ul.fire-list li::before {
 ul.fire-list li:hover {
        border-radius: 4px;
 }
+
+/* ===== Светофор ===== */
+button.traffic-light, button.traffic-light:hover {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: max-content;
+  padding: 16px;
+  background: #27313b;
+  border-radius: 15px;
+}
+.lamp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #555;
+  opacity: 0.35;
+}
+.lamp.active { opacity: 1; }
+.red.active { background: red; }
+.yellow.active { background: gold; }
+.green.active { background: limegreen; }
