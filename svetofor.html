@@ -41,19 +41,18 @@
     }
     setInterval(autoSwitch, 2000);
 
-    let b = 0;
+    let blink = false;
     let lamps = document.querySelectorAll("#autoTraffic .lamp");
 
     function blinkLight() {
-      b++;
-      if (b == 2) b = 0;
+      blink = !blink;
 
       for (let j = 0; j < 3; j++) {
-        lamps[j].style.opacity = "0.35";
+        lamps[j].style.opacity = "";
       }
 
-      if (a == 1 || b == 0) {
-        lamps[a].style.opacity = "1";
+      if (a != 1 && blink) {
+        lamps[a].style.opacity = "0.15";
       }
     }
 
