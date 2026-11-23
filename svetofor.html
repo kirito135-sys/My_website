@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <title>Светофор</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <div id="menu"><script src="menu.js"></script></div>
@@ -14,6 +14,15 @@
     <span class="lamp yellow"></span>
     <span class="lamp green"></span>
   </button>
+
+  <h2>Автоматический светофор</h2>
+  <p>Этот светофор переключается сам каждые 2 секунды.</p>
+  <div id="autoTraffic" class="traffic-light color0">
+    <span class="lamp red"></span>
+    <span class="lamp yellow"></span>
+    <span class="lamp green"></span>
+  </div>
+
   <script>
     let i = 0;
 
@@ -22,6 +31,16 @@
       if (i == 3) i = 0;
       document.getElementById("traffic").className = "traffic-light color" + i;
     }
+
+    let a = 0;
+
+    function autoSwitch() {
+      a++;
+      if (a == 3) a = 0;
+      document.getElementById("autoTraffic").className = "traffic-light color" + a;
+    }
+
+    setInterval(autoSwitch, 2000);
   </script>
 </body>
 </html>
