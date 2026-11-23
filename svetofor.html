@@ -27,24 +27,27 @@
       if (i == 3) i = 0;
       document.getElementById("traffic").className = "traffic-light color" + i;
     }
-    function autoSwitch() {
-      a++;
-      if (a == 3) a = 0;
-      document.getElementById("autoTraffic").className = "traffic-light color" + a;
-    }
-    setInterval(autoSwitch, 2000);
-    let blink = false;
+    let t = 0;
     let lamps = document.querySelectorAll("#autoTraffic .lamp");
-    function blinkLight() {
-      blink = !blink;
+
+    function autoSwitch() {
+      t++;
+      if (t == 8) {
+        t = 0;
+        a++;
+        if (a == 3) a = 0;
+        document.getElementById("autoTraffic").className = "traffic-light color" + a;
+      }
+
       for (let j = 0; j < 3; j++) {
         lamps[j].style.opacity = "";
       }
-      if (a != 1 && blink) {
+
+      if (a != 1 && (t == 4 || t == 6)) {
         lamps[a].style.opacity = "0.15";
       }
     }
-    setInterval(blinkLight, 300);
+    setInterval(autoSwitch, 250);
   </script>
 </body>
 </html>
