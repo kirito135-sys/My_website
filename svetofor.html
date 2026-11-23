@@ -21,13 +21,12 @@
     <span class="lamp green"></span>
   </div>
   <script>
-    let i = 0, a = 0;
+    let i = 0, a = 0, t = 0;
     function switchLight() {
       i++;
       if (i == 3) i = 0;
       document.getElementById("traffic").className = "traffic-light color" + i;
     }
-    let t = 0;
     let lamps = document.querySelectorAll("#autoTraffic .lamp");
     function autoSwitch() {
       t++;
