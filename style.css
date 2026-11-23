@@ -335,7 +335,6 @@ button.traffic-light, button.traffic-light:hover {
   background: #555;
   opacity: 0.35;
 }
-.lamp.active { opacity: 1; }
-.red.active { background: red; }
-.yellow.active { background: gold; }
-.green.active { background: limegreen; }
+.traffic-light.color0 .red { opacity: 1; background: red; }
+.traffic-light.color1 .yellow { opacity: 1; background: gold; }
+.traffic-light.color2 .green { opacity: 1; background: limegreen; }
