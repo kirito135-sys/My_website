@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Светофор</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    button.traffic-light, button.traffic-light:hover {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: max-content;
+      padding: 16px;
+      background: #27313b;
+      border-radius: 15px;
+    }
+    .lamp {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #555;
+      opacity: 0.35;
+    }
+    .lamp.active { opacity: 1; }
+    .red.active { background: red; }
+    .yellow.active { background: gold; }
+    .green.active { background: limegreen; }
+  </style>
+</head>
+<body>
+  <div id="menu"><script src="menu.js"></script></div>
+  <h1>Светофор</h1>
+  <p>Нажмите на светофор, чтобы переключить сигнал.</p>
+
+  <button class="traffic-light" onclick="switchLight()" aria-label="Переключить сигнал светофора">
+    <span class="lamp red active"></span>
+    <span class="lamp yellow"></span>
+    <span class="lamp green"></span>
+  </button>
+
+  <p>Сейчас горит: <strong id="status">Красный</strong></p>
+  <script>
+    let current = 0;
+    const lamps = document.querySelectorAll(".lamp");
+    const names = ["Красный", "Жёлтый", "Зелёный"];
+
+    function switchLight() {
+      lamps[current].classList.remove("active");
+      current = (current + 1) % 3;
+      lamps[current].classList.add("active");
+      document.getElementById("status").textContent = names[current];
+    }
+  </script>
+</body>
+</html>
