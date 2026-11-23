@@ -29,7 +29,6 @@
     }
     let t = 0;
     let lamps = document.querySelectorAll("#autoTraffic .lamp");
-
     function autoSwitch() {
       t++;
       if (t == 8) {
@@ -38,11 +37,9 @@
         if (a == 3) a = 0;
         document.getElementById("autoTraffic").className = "traffic-light color" + a;
       }
-
       for (let j = 0; j < 3; j++) {
         lamps[j].style.opacity = "";
       }
-
       if (a != 1 && (t == 4 || t == 6)) {
         lamps[a].style.opacity = "0.15";
       }
