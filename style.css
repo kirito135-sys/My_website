@@ -319,7 +319,7 @@ ul.fire-list li:hover {
 }
 
 /* ===== Светофор ===== */
-button.traffic-light, button.traffic-light:hover {
+.traffic-light, button.traffic-light:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
